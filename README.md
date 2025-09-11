@@ -53,6 +53,8 @@ It is seen from Table 2 that each of the collected GTFS dataset has 7 .txt files
 |stops.txt|stops_name|stop_id|stop_lat| stop_lon|||||||
 |trips.txt|route_id|service_id|direction_id|trip_id|||||||
 
+![GTFS File Links](assets/gtfs_file_links_drawio.svg)
+
 **agency.txt:** It provides information about the public transport operator of this feed. They are uniquely identified with the agency_id field. This file also provides the timezone in the format of HH:MM:SS. It is important to the have same timezone when there are multiple agencies.
 
 **calendar.txt:** This file provides service time for each day of the week. Starting and end dates of the feeds are also provided in this file. This file has a unique service_id that relates trips.txt file.
