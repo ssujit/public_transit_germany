@@ -81,9 +81,6 @@ Source: OECD (2024), Urban population by city size (indicator). doi: 10.1787/b43
 - [Spatial statistics with KNN weights](https://github.com/ssujit/move_sustainable/blob/main/notebook/2_spatial_statistics_neighborhood.ipynb)
 
 
-## Note: The interactive notebook can be run using GESIS binderhub: https://notebooks.gesis.org/binder/
-
-# Demo Dashboard
-Explore: [https://move-sustainable.streamlit.app](https://move-sustainable.streamlit.app) 
+## Note: The interactive notebook can be run using binderhub: [https://mybinder.org](https://mybinder.org)
 
 
