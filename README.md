@@ -1,5 +1,8 @@
 # About 
-This repository hosts the code and resources for public transit visualization, a streamlit cloud-based dashboard designed to explore the mobility in public transit service frequency using GTFS data of Germany. It includes the graphical model builder tool of QGIS for processing raw GTFS data, generating Distance Indicators, and implementing Local Moran's Index for spatial analysis using python.
+This repository hosts the code and resources for geoprocessing open public transit data, and to explore the mobility in public transit service frequency using GTFS data of Germany. It includes the graphical model builder tool of QGIS for processing raw GTFS data, generating Distance Indicators, and implementing Local Moran's Index for spatial analysis using python.
+
+Download and Find more details on the published curatated dataset: 
+Sikder, Sujit Kumar, 2025, "Replication package for: Urban Public Transit Frequency Indicator in Germany", [https://doi.org/10.71830/ABPCUS](https://doi.org/10.71830/ABPCUS), ioerDATA, V1 
 
 
 # Reading data
