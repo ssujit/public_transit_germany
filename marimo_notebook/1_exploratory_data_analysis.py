@@ -34,13 +34,11 @@ def _():
     import matplotlib.pyplot as plt
     import warnings
     warnings.filterwarnings("ignore")
-    return plt, sns
+    return gpd, plt, sns
 
 
 @app.cell
-def _():
-    import geopandas as gpd
-
+def _(gpd):
     # Base URL
     url = "https://raw.githubusercontent.com/ssujit/public_transit_germany/main/data/"
 
