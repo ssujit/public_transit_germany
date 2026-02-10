@@ -13,9 +13,9 @@ app = marimo.App()
 
 @app.cell
 def _():
-    import marimo as moc
+    import marimo as mo
 
-    return
+    return (mo,)
 
 
 @app.cell(hide_code=True)
