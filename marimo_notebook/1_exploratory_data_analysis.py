@@ -4,6 +4,7 @@
 #     "marimo>=0.19.9",
 # ]
 # ///
+
 import marimo
 
 __generated_with = "0.19.9"
