@@ -1,9 +1,3 @@
-# /// script
-# requires-python = ">=3.13"
-# dependencies = [
-#     "marimo>=0.19.9",
-# ]
-# ///
 import marimo
 
 __generated_with = "0.19.9"
@@ -12,9 +6,9 @@ app = marimo.App()
 
 @app.cell
 def _():
-    import marimo as mo
+    import marimo as moc
 
-    return (mo,)
+    return
 
 
 @app.cell(hide_code=True)
@@ -33,28 +27,31 @@ def _():
     import matplotlib.pyplot as plt
     import warnings
     warnings.filterwarnings("ignore")
-    return gpd, plt, sns
+    return plt, sns
 
 
 @app.cell
-def _(gpd):
-    url = 'https://raw.github.com/ssujit/move_sustainable/main/data/'
+def _():
+    import geopandas as gpd
 
-    # variable declaration
-    wkam = 'wkamo_hdn.gpkg' # wkamo: weekdays peak-traffic morning hours (6:00-8:59) 
-    wkpm = 'wkpmo_hdn.gpkg' # wkamo: weekdays peak-traffic afternoon hours (14:00-16:59) 
-    satam = 'satamo_hdn.gpkg' # satamo: Saturday peak-traffic morning hours (6:00-8:59) 
-    satpm = 'satpmo_hdn.gpkg' # satpmo: Saturday peak-traffic afternoon hours (14:00-16:59)  
-    sunam = 'sunamo_hdn.gpkg' # sunamo: Saturday peak-traffic morning hours (6:00-8:59)
-    sunpm = 'sunamo_hdn.gpkg' # sanpmo: Saturday peak-traffic afternoon hours (14:00-16:59) 
+    # Base URL
+    url = "https://raw.githubusercontent.com/ssujit/public_transit_germany/main/data/"
 
-    #read the files
-    wk_am = gpd.read_file(f'{url}{wkam}')
-    wk_pm = gpd.read_file(f'{url}{wkpm}')
-    sat_am = gpd.read_file(f'{url}{satam}')
-    sat_pm = gpd.read_file(f'{url}{satpm}')
-    sun_am = gpd.read_file(f'{url}{sunam}')
-    sun_pm = gpd.read_file(f'{url}{sunpm}')
+    # File names
+    wkam = "wkamo_hdn.gpkg"   # weekdays morning peak (06:00–08:59)
+    wkpm = "wkpmo_hdn.gpkg"   # weekdays afternoon peak (14:00–16:59)
+    satam = "satamo_hdn.gpkg" # Saturday morning peak (06:00–08:59)
+    satpm = "satpmo_hdn.gpkg" # Saturday afternoon peak (14:00–16:59)
+    sunam = "sunamo_hdn.gpkg" # Sunday morning peak (06:00–08:59)
+    sunpm = "sanpmo_hdn.gpkg" # Sunday afternoon peak (14:00–16:59) — corrected
+
+    # Read files
+    wk_am  = gpd.read_file(f"{url}{wkam}")
+    wk_pm  = gpd.read_file(f"{url}{wkpm}")
+    sat_am = gpd.read_file(f"{url}{satam}")
+    sat_pm = gpd.read_file(f"{url}{satpm}")
+    sun_am = gpd.read_file(f"{url}{sunam}")
+    sun_pm = gpd.read_file(f"{url}{sunpm}")
     return sat_am, sat_pm, sun_am, sun_pm, wk_am, wk_pm
 
 

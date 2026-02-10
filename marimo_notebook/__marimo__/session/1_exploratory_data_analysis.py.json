@@ -1,0 +1,314 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.9"
+  },
+  "cells": [
+    {
+      "id": "MJUe",
+      "code_hash": "2c1160554fc3ea6efb3901282d8eb90d",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"exploratory-spatial-data-analysis-for-hilden-city\">Exploratory Spatial Data Analysis for Hilden city</h1></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "5297b815c6bcca3d9466dc354ebcc290",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "8f05cfd3c67acd621485aa2bfe82d988",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "HTTP Error 404: Not Found",
+          "traceback": []
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stderr",
+          "text": "<span class=\"codehilite\"><div class=\"highlight\"><pre><span></span><span class=\"gt\">Traceback (most recent call last):</span>\n  File <span class=\"nb\">&quot;C:\\Users\\user\\Downloads\\public_transit_germany\\marimo_notebook\\.venv\\Lib\\site-packages\\marimo\\_runtime\\executor.py&quot;</span>, line <span class=\"m\">138</span>, in <span class=\"n\">execute_cell</span>\n<span class=\"w\">    </span><span class=\"n\">exec</span><span class=\"p\">(</span><span class=\"n\">cell</span><span class=\"o\">.</span><span class=\"n\">body</span><span class=\"p\">,</span> <span class=\"n\">glbls</span><span class=\"p\">)</span>\n<span class=\"w\">    </span><span class=\"pm\">~~~~^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;C:\\Users\\user\\AppData\\Local\\Temp\\marimo_22152\\__marimo__cell_bkHC_.py&quot;</span>, line <span class=\"m\">18</span>, in <span class=\"n\">&lt;module&gt;</span>\n<span class=\"w\">    </span><span class=\"n\">sun_pm</span> <span class=\"o\">=</span> <span class=\"n\">gpd</span><span class=\"o\">.</span><span class=\"n\">read_file</span><span class=\"p\">(</span><span class=\"sa\">f</span><span class=\"s2\">&quot;</span><span class=\"si\">{</span><span class=\"n\">url</span><span class=\"si\">}{</span><span class=\"n\">sunpm</span><span class=\"si\">}</span><span class=\"s2\">&quot;</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Users\\user\\Downloads\\public_transit_germany\\marimo_notebook\\.venv\\Lib\\site-packages\\geopandas\\io\\file.py&quot;</span>, line <span class=\"m\">300</span>, in <span class=\"n\">_read_file</span>\n<span class=\"w\">    </span><span class=\"k\">with</span> <span class=\"n\">urllib</span><span class=\"o\">.</span><span class=\"n\">request</span><span class=\"o\">.</span><span class=\"n\">urlopen</span><span class=\"p\">(</span>\n<span class=\"w\">         </span><span class=\"pm\">~~~~~~~~~~~~~~~~~~~~~~^</span>\n<span class=\"w\">    </span>    <span class=\"n\">Request</span><span class=\"p\">(</span><span class=\"n\">filename</span><span class=\"p\">,</span> <span class=\"n\">headers</span><span class=\"o\">=</span><span class=\"p\">{</span><span class=\"s2\">&quot;Range&quot;</span><span class=\"p\">:</span> <span class=\"s2\">&quot;bytes=0-1&quot;</span><span class=\"p\">})</span>\n<span class=\"w\">        </span><span class=\"pm\">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>\n<span class=\"w\">    </span><span class=\"p\">)</span> <span class=\"k\">as</span> <span class=\"n\">response</span><span class=\"p\">:</span>\n<span class=\"w\">    </span><span class=\"pm\">^</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">189</span>, in <span class=\"n\">urlopen</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"n\">opener</span><span class=\"o\">.</span><span class=\"n\">open</span><span class=\"p\">(</span><span class=\"n\">url</span><span class=\"p\">,</span> <span class=\"n\">data</span><span class=\"p\">,</span> <span class=\"n\">timeout</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">495</span>, in <span class=\"n\">open</span>\n<span class=\"w\">    </span><span class=\"n\">response</span> <span class=\"o\">=</span> <span class=\"n\">meth</span><span class=\"p\">(</span><span class=\"n\">req</span><span class=\"p\">,</span> <span class=\"n\">response</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">604</span>, in <span class=\"n\">http_response</span>\n<span class=\"w\">    </span><span class=\"n\">response</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">parent</span><span class=\"o\">.</span><span class=\"n\">error</span><span class=\"p\">(</span>\n<span class=\"w\">    </span>    <span class=\"s1\">&#39;http&#39;</span><span class=\"p\">,</span> <span class=\"n\">request</span><span class=\"p\">,</span> <span class=\"n\">response</span><span class=\"p\">,</span> <span class=\"n\">code</span><span class=\"p\">,</span> <span class=\"n\">msg</span><span class=\"p\">,</span> <span class=\"n\">hdrs</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">533</span>, in <span class=\"n\">error</span>\n<span class=\"w\">    </span><span class=\"k\">return</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_call_chain</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">)</span>\n<span class=\"w\">           </span><span class=\"pm\">~~~~~~~~~~~~~~~~^^^^^^^</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">466</span>, in <span class=\"n\">_call_chain</span>\n<span class=\"w\">    </span><span class=\"n\">result</span> <span class=\"o\">=</span> <span class=\"n\">func</span><span class=\"p\">(</span><span class=\"o\">*</span><span class=\"n\">args</span><span class=\"p\">)</span>\n  File <span class=\"nb\">&quot;C:\\Program Files\\Python313\\Lib\\urllib\\request.py&quot;</span>, line <span class=\"m\">613</span>, in <span class=\"n\">http_error_default</span>\n<span class=\"w\">    </span><span class=\"k\">raise</span> <span class=\"n\">HTTPError</span><span class=\"p\">(</span><span class=\"n\">req</span><span class=\"o\">.</span><span class=\"n\">full_url</span><span class=\"p\">,</span> <span class=\"n\">code</span><span class=\"p\">,</span> <span class=\"n\">msg</span><span class=\"p\">,</span> <span class=\"n\">hdrs</span><span class=\"p\">,</span> <span class=\"n\">fp</span><span class=\"p\">)</span>\n<span class=\"gr\">urllib.error.HTTPError</span>: <span class=\"n\">HTTP Error 404: Not Found</span>\n</pre></div>\n</span>",
+          "mimetype": "application/vnd.marimo+traceback"
+        }
+      ]
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "ef48d29f43c48b7696cb773c2b0b393f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "1a92392c42b61533acc84252108d2c4b",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "3bef0601c9e712dc267cc8462a48224a",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "70efa2be50bd5b78789b4f90a4a54214",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "35c8c7b9336ed818361d151fdfac5d22",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "fbd33e590131aeb2d0c0fbcc62c08996",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "08721e63327bcba156b30d10c73497d5",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "0574195415d354f21f529534042d3e8e",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "a53bcca39ae534f9ff95902dff55242f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "e072d9cc2aa29d68b540ce16fd5c9d55",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "3e9339202bbde7d14f49e4844afa68e6",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "c58dc114c4ff00ef1bfd5e19f6f15fd8",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "0431f3c53c322bb46df73f134515392b",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "41a4a527195c277ffc6bddd9049716ea",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "64af35b9b94fd4ce69366214676be38a",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "d24a6eccdf0cbb197160cfb22fc64cbe",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "da4436f09b848c7db421510eb1547d2f",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "606f2e5e53bd30303294d419f56c37f7",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "50c02e4bb4e04a488e4a481e3e25e912",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "exception",
+          "evalue": "An ancestor raised an exception (HTTPError): ",
+          "traceback": []
+        }
+      ],
+      "console": []
+    }
+  ]
+}
